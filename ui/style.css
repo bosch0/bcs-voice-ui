@@ -1,0 +1,49 @@
+@font-face {
+    font-family: bankgothic;
+    src: url("./font/bankgothic.ttf");
+}
+
+body {
+    overflow: hidden;
+}
+
+.proximity {
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    right: 1.1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: bankgothic;
+    font-size: .9rem;
+    animation: proximity-enter ease .5s;
+}
+
+.talking {
+    display: none;
+    position: absolute;
+    bottom: 2vh;
+    right: 2vh;
+    width: auto;
+    height: 2vh;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1vh black;
+    text-shadow: 0 0 1vh white;
+    font-size: 1.2rem;
+}
+
+@keyframes talking {
+    50% {
+        text-shadow: none;
+    } 100% {
+        text-shadow: 0 0 1vh white;
+    }
+}
+
+@keyframes proximity-enter {
+    from {
+        right: 2vw;
+    }
+}
